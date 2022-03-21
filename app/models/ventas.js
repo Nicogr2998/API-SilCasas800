@@ -21,7 +21,8 @@ const VentasScheme = new Schema(
             type: Number
         },
         ambientes: {
-            type: Number
+            type: Number,
+            default: 9
         },
         precio:{
             type: Number
