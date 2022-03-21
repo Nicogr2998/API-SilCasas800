@@ -11,7 +11,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-const port = 3001
+const port = process.env.PORT || 3001
 
 const userRouter = require('./app/routes/user')
 const itemsRouter = require('./app/routes/items')
