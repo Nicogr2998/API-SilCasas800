@@ -28,7 +28,7 @@ const parseId = (id) => {
 //opciones de paginacion
 const option = {
     page: 1,
-    limit: 6
+    limit: 60
 }
 
 
