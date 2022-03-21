@@ -94,5 +94,15 @@ exports.deleteSingle = (req, res) => {
 /* OBTENER DATOS */
 
 exports.getSingle = (req, res) => {
+    const id = req.params.id
+    const body = req.body
+    model.findOne(
+        { _id: parseId(req.params.id)},
+        body,
 
+    (err, docs) =>{
+        res.send({
+            items: docs
+        })
+    })
 }
