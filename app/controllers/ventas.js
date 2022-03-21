@@ -52,7 +52,6 @@ exports.insertData = (req, res, next) => {
         descripcion:req.body.descripcion,
         tamanio:req.body.tamanio,
         banios: req.body.banios,
-        ambientes: req.body.ambientes,
         precio:req.body.precio,
         tipo:req.body.tipo,
         ubicacion:req.body.ubicacion,

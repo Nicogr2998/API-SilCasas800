@@ -20,10 +20,6 @@ const VentasScheme = new Schema(
         banios: {
             type: Number
         },
-        ambientes: {
-            type: Number,
-            default: 10
-        },
         precio:{
             type: Number
         },
@@ -59,8 +55,8 @@ const VentasScheme = new Schema(
         },
         garage:{
             type: Number
-        }
-        ,cuartos:{
+        },
+        cuartos:{
             type: Number
         }
 
