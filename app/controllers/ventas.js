@@ -62,7 +62,9 @@ exports.insertData = (req, res, next) => {
         amueblado:req.body.amueblado,
         coEquip:req.body.coEquip,
         mascotas:req.body.mascotas,
-        ascensor:req.body.ascensor
+        ascensor:req.body.ascensor,
+        planta:req.body.planta,
+        garage:req.body.garage
     })
     if(req.files){
         let path = ''

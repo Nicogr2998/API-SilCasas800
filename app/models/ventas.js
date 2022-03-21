@@ -20,7 +20,7 @@ const VentasScheme = new Schema(
         banios: {
             type: Number
         },
-        ambientess: {
+        ambientes: {
             type: Number
         },
         precio:{
@@ -52,6 +52,12 @@ const VentasScheme = new Schema(
         },
         ascensor:{
             type: String
+        },
+        planta:{
+            type: String
+        },
+        garage:{
+            type: Number
         }
 
     },{
