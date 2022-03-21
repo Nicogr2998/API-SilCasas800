@@ -22,7 +22,7 @@ const VentasScheme = new Schema(
         },
         ambientes: {
             type: Number,
-            default: 9
+            default: 10
         },
         precio:{
             type: Number
@@ -58,6 +58,9 @@ const VentasScheme = new Schema(
             type: String
         },
         garage:{
+            type: Number
+        }
+        ,cuartos:{
             type: Number
         }
 
