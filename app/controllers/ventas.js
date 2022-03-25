@@ -116,7 +116,7 @@ exports.updateSingle = (req, res) => {
 
 exports.deleteSingle = (req, res) => {
     const {id} = req.params.id
-    model.deleteOne({ _id: parseId(id)},
+    model.deleteOne({ _id: parseId(req.params.id)},
     (err, docs) =>{
         res.send({
             items: docs
