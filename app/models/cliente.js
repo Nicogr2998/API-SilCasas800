@@ -2,6 +2,7 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
 const ClienteScheme = new Schema(
     {
         nombre: {
