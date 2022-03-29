@@ -21,5 +21,8 @@
     "path": "^0.12.7",
     "shorti": "^1.2.6",
     "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
   }
 }

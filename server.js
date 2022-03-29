@@ -17,6 +17,7 @@ const userRouter = require('./app/routes/user')
 const itemsRouter = require('./app/routes/items')
 //const uploadRouter = require('./app/routes/upload2')
 const ventasRouter = require('./app/routes/ventas')
+const clienteRouter = require('./app/routes/cliente')
 const upload = require("./app/utils/upload")
 const cors = require('cors')
 //const { use } = require('express/lib/application')
@@ -26,6 +27,8 @@ app.use(userRouter)
 app.use(itemsRouter)
 //app.use(uploadRouter)
 app.use(ventasRouter)
+app.use(clienteRouter)
+
 app.use('/uploads', express.static('uploads'))
 
 app.use(
