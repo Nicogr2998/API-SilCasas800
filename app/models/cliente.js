@@ -36,7 +36,7 @@ const ClienteScheme = new Schema(
         timestamps:true
     }
 )
-//ClienteScheme.plugin(mongoosePaginate)
+ClienteScheme.plugin(mongoosePaginate)
 
 const Cliente = mongoose.model('Cliente', ClienteScheme)
 module.exports = Cliente
