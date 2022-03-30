@@ -38,8 +38,8 @@ const ClienteScheme = new Schema(
             default: 'no definido'
         },
         tipo:{
-            type: String,
-            default: 'no definido'
+            type: Number,
+            default: 0
         }
     },{
         timestamps:true
