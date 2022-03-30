@@ -102,7 +102,7 @@ exports.updateSingle = (req, res) => {
     const id = req.params.id
     const body = req.body
     model.updateOne(
-        { _id: parseId(req.params.id)},
+        { _id: parseId(id)},
         body,
 
     (err, docs) =>{
