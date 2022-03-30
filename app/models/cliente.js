@@ -6,32 +6,40 @@ const Schema = mongoose.Schema
 const ClienteScheme = new Schema(
     {
         nombre: {
-            type:  String
+            type:  String,
+            default: 'no definido'
         },
         archivos: {
             type: String,
             default: 'http://image.com'
         },
         correo: {
-            type: String
+            type: String,
+            default: 'no definido'
         },
         telefono: {
-            type: Number
+            type: Number,
+            default: 0
         },
         direccion: {
-            type: String
+            type: String,
+            default: 'no definido'
         },
         documento:{
-            type: Number
+            type: Number,
+            default: 0
         },
         vinculo:{
-            type: String
+            type: String,
+            default: 'no definido'
         },
         notas:{
-            type: String
+            type: String,
+            default: 'no definido'
         },
         tipo:{
-            type: String
+            type: String,
+            default: 'no definido'
         }
     },{
         timestamps:true
