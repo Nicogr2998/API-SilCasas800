@@ -58,6 +58,10 @@ const VentasScheme = new Schema(
         },
         cuartos:{
             type: Number
+        },
+        activo:{
+            type: Number,
+            default: 1
         }
 
     },{
