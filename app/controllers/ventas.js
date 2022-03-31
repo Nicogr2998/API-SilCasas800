@@ -103,7 +103,7 @@ exports.updateSingle = (req, res) => {
     model.updateOne(
         { _id: parseId(req.params.id)},
         body,
-    (_err, docs) =>{
+    ( _err, docs) =>{
         res.send({
             items: docs
         })
