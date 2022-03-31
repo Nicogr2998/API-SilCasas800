@@ -42,6 +42,7 @@ exports.getData = (req, res) => {
     })
   
 
+    
 }
 
 /* INSERTAR DATOS DE USUARIOS */
