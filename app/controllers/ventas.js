@@ -99,13 +99,11 @@ exports.insertData = (req, res, next) => {
 /* MODIFICAR DATOS*/
 
 exports.updateSingle = (req, res) => {
-    const id = req.params.id
     const body = req.body
     model.updateOne(
-        { _id: parseId(id)},
+        { _id: parseId(req.params.id)},
         body,
-
-    (err, docs) =>{
+    (_err, docs) =>{
         res.send({
             items: docs
         })
