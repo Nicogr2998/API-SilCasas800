@@ -42,8 +42,9 @@ exports.getData = (req, res) => {
     })
   
 
-
+    
 }
+
 /* INSERTAR DATOS DE USUARIOS */
 exports.insertData = (req, res, next) => {
     let venta = new Ventas({
