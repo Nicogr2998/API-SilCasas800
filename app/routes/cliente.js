@@ -22,6 +22,7 @@ router.get(
     controller.getData
 )
 
+
 /**
  * Ruta: /user POST
  */
