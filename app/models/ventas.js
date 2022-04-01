@@ -60,7 +60,7 @@ const VentasScheme = new Schema(
             type: Number
         },
         id_cliente:{
-            type: Number
+            type: String
         },
         activo:{
             type: Number,
