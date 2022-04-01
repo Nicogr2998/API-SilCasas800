@@ -66,6 +66,7 @@ exports.insertData = (req, res, next) => {
         planta:req.body.planta,
         garage:req.body.garage,
         cuartos:req.body.cuartos,
+        id_cliente:req.body.id_cliente,
         activo:req.body.activo
     })
     if(req.files){
