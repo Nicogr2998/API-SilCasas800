@@ -16,6 +16,19 @@ const avatar = "avatar"
 
 const upload = require('../utils/upload')
 
+const express = require('express')
+
+const fs = require('fs')
+const util = require('util')
+const unlinkFile = util.promisify(fs.unlink)
+
+const multer = require('multer')
+//const upload = multer({ dest: 'uploads/' })
+
+const { uploadFile, getFileStream } = require('../utils/s3')
+
+const app = express()
+
 /*Ruta /user GET */
 router.get(
     pathCompleta,
@@ -28,7 +41,23 @@ router.get(
  router.post(
     pathCompleta,
     upload.array(avatarA),
-    controller.insertData
+    controller.insertData,
+     /*upload.array('avatar[]'), async (req, res) => {
+        const file = req.files
+        //req.file.filename = req.file.originalname
+        console.log(JSON.stringify(file))
+      
+        // apply filter
+        // resize 
+        for (const iterator of file) {
+            iterator.filename = iterator.originalname
+            const result = await uploadFile(iterator)
+            await unlinkFile(iterator.path)
+            console.log(result)
+            const description = req.body.description
+        }
+        res.send({imagePath: `Pronto el pollo!`})
+      }*/
 )
 
 /*Ruta /user GET */

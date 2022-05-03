@@ -8,6 +8,14 @@ const Ventas = require('../models/ventas');
 
 const upload = multer(multerConfig).single('path');
 
+const fs = require('fs')
+const util = require('util')
+const unlinkFile = util.promisify(fs.unlink)
+
+const upload1 = multer({ dest: '../uploads/' })
+
+const { uploadFile, getFileStream } = require('../utils/s3')
+
 //carga imagenes
 exports.fileUpload = (req, res, next) => {
     upload(req, res, function(error) {
@@ -45,7 +53,7 @@ exports.getData = (req, res) => {
 }
 
 /* INSERTAR DATOS DE USUARIOS */
-exports.insertData = (req, res, next) => {
+exports.insertData = async (req, res, next) => {
     let venta = new Ventas({
         titulo: req.body.titulo,
         avatar: req.body.avatar,
@@ -69,11 +77,28 @@ exports.insertData = (req, res, next) => {
     if(req.files){
         let path = ''
         req.files.forEach(function(files,index, arr) {
-            path = path + files.path + ','
+            path = path + files.originalname + ','
         })
         path = path.substring(0, path.lastIndexOf(","))
         venta.avatar = path
-    }
+
+       
+            const file = req.files
+            //req.file.filename = req.file.originalname
+            console.log(JSON.stringify(file))
+          
+            // apply filter
+            // resize 
+            for (const iterator of file) {
+                iterator.filename =   iterator.originalname
+                const result = await uploadFile(iterator)
+                await unlinkFile(iterator.path)
+                console.log(result)
+                const description = req.body.description
+            }
+          }
+    
+
     res.send({venta})
     venta.save();
     console.log("salta por aca")

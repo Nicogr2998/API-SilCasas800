@@ -27,7 +27,7 @@ router.get(
  */
  router.post(
     pathCompleta,
-    upload.array(avatarA),
+   // upload.array(avatarA),
     controller.insertData
 )
 
